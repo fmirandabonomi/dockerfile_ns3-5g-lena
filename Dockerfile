@@ -136,6 +136,6 @@ WORKDIR /ns3/ns-3-dev/contrib/nr
 RUN git submodule sync --recursive &&\
     git submodule update --init --recursive &&\
     python3 doc/m.css/documentation/doxygen.py doc/doxygen-mcss.conf --debug
-
+WORKDIR /ns3/ns-3-dev
 # Para usar como ejecutable
 ENTRYPOINT ["./ns3", "run"]
